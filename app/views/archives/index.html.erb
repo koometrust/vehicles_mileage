@@ -35,5 +35,14 @@
         <% end %>
       <% end %>
     <% end %>
+
+   <% if @current_week_mileage.present? %>
+  <div class="card mt-6">
+    <div class="card-content">
+      <h3 class="is-size-4 has-text-weight-bold mb-4 has-text-centered">
+        Current Weekly Mileage
+      </h3>
+      <p class="title has-text-centered"><%= @current_week_mileage %></p>
+    </div>
   </div>
-</div>
+<% end %>
