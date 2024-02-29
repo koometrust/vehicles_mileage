@@ -1,0 +1,39 @@
+<div class="columns is-centered mt-6">
+  <div class="column is-half mt-6">
+    <% @entries.each do |day, entries| %>
+      <h3 class="is-size-4 has-text-weight-bold mb-4 has-text-centered">Vehicles for <%= day %> </h3>
+
+      <% entries.each do |entry| %>
+        <%= link_to entry_path(entry) do %>
+          <div class="card">
+            <div class="card-content">
+              <strong><%= entry.vehicle_name %></strong></br>
+              <%= entry.number_plate %> </br></br>
+
+              <nav class="level is-mobile">
+                <div class="level-item has-text-centered">
+                  <div>
+                    <p class="heading">Checkout Mileage</p>
+                    <p class="title"><%= entry.checkout_mileage %></p>
+                  </div>
+                </div>
+                <div class="level-item has-text-centered">
+                  <div>
+                    <p class="heading">Checkin Mileage</p>
+                    <p class="title"><%= entry.checkin_mileage %></p>
+                  </div>
+                </div>
+                <div class="level-item has-text-centered">
+                  <div>
+                    <p class="heading">Mileage Traveled</p>
+                    <p class="title"><%= entry.checkin_mileage - entry.checkout_mileage %></p>
+                  </div>
+                </div>
+              </nav>
+            </div>
+          </div>
+        <% end %>
+      <% end %>
+    <% end %>
+  </div>
+</div>
