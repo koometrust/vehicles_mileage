@@ -1,27 +1,40 @@
 <div id="<%= dom_id entry %>">
-  <p>
-    <strong>Vehicle name:</strong>
-    <%= entry.vehicle_name %>
-  </p>
+  <div class="card">
+    <header class="card-header custom-header">
+      <p class="card-header-title">
+        <%= entry.vehicle_name %>
+      </p>
+    </header>
+    <div class="card-content">
+      <div class="content">
+        <p>
+          <strong>Vehicle number:</strong>
+          <%= entry.vehicle_number %>
+        </p>
 
-  <p>
-    <strong>Vehicle number:</strong>
-    <%= entry.vehicle_number %>
-  </p>
+        <p>
+          <strong>Number plate:</strong>
+          <%= entry.number_plate %>
+        </p>
 
-  <p>
-    <strong>Number plate:</strong>
-    <%= entry.number_plate %>
-  </p>
+        <p>
+          <strong>Checkout mileage:</strong>
+          <%= entry.checkout_mileage %>
+        </p>
 
-  <p>
-    <strong>Checkout mileage:</strong>
-    <%= entry.checkout_mileage %>
-  </p>
-
-  <p>
-    <strong>Checkin mileage:</strong>
-    <%= entry.checkin_mileage %>
-  </p>
-
+        <p>
+          <strong>Checkin mileage:</strong>
+          <%= entry.checkin_mileage %>
+        </p>
+      </div>
+    </div>
+    <footer class="card-footer">
+      <p class="card-footer-item">
+        <%= link_to "Show this entry", entry %>
+      </p>
+      <p class="card-footer-item">
+        <%= link_to "Edit this entry", edit_entry_path(entry) %>
+      </p>
+    </footer>
+  </div>
 </div>

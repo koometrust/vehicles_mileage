@@ -12,31 +12,31 @@
   <% end %>
 
   <div>
-    <%= form.label :vehicle_name, style: "display: block" %>
-    <%= form.text_field :vehicle_name %>
+    <%= form.label :vehicle_name, class: "label", style: "display: block" %>
+    <%= form.text_field :vehicle_name, class: "input" %>
   </div>
 
   <div>
-    <%= form.label :vehicle_number, style: "display: block" %>
-    <%= form.number_field :vehicle_number %>
+    <%= form.label :vehicle_number, class: "label", style: "display: block" %>
+    <%= form.number_field :vehicle_number, class: "input" %>
   </div>
 
   <div>
-    <%= form.label :number_plate, style: "display: block" %>
-    <%= form.text_field :number_plate %>
+    <%= form.label :number_plate, class: "label", style: "display: block" %>
+    <%= form.text_field :number_plate, class: "input" %>
   </div>
 
   <div>
-    <%= form.label :checkout_mileage, style: "display: block" %>
-    <%= form.number_field :checkout_mileage %>
+    <%= form.label :checkout_mileage, class: "label", style: "display: block" %>
+    <%= form.number_field :checkout_mileage, class: "input" %>
   </div>
 
   <div>
-    <%= form.label :checkin_mileage, style: "display: block" %>
-    <%= form.number_field :checkin_mileage %>
+    <%= form.label :checkin_mileage, class: "label", style: "display: block" %>
+    <%= form.number_field :checkin_mileage, class: "input" %>
   </div>
 
   <div>
-    <%= form.submit %>
+    <%= form.submit class: "button is-success" %>
   </div>
 <% end %>

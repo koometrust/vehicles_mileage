@@ -13,3 +13,7 @@
  *= require_tree .
  *= require_self
  */
+ .custom-header {
+    background-color: #979797; /* Adjust the color as needed */
+  }
+  

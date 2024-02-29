@@ -1,16 +1,24 @@
-
 <% content_for :title do %>
-  CarMilezz &ndash; <%= DateTime.now %>
-<% end%>
+  CarMilezz &ndash; <%= DateTime.now.to_formatted_s(:nice_date) %>
+<% end %>
 
-
-
-<div id="entries">
+<div id="entries" class="columns is-multiline">
   <% @entries.each do |entry| %>
-    <%= render entry %>
-    <p>
-      <%= link_to "Show this entry", entry %>
-    </p>
+    <div class="column is-one-third">
+      <div class="card">
+        <div class="card-content">
+          <%= render entry %>
+           <p>
+            Updated <%= time_ago_in_words(entry.updated_at) %> ago
+          </p>
+<!--
+          <p>
+            <%= link_to "Show this entry", entry %>
+          </p>
+-->
+        </div>
+      </div>
+    </div>
   <% end %>
 </div>
 
